@@ -20,6 +20,11 @@ public class Management {
 	public void setDeadLineTime(int deadLineTime) {
 		this.deadLineTime = deadLineTime;
 	}
-	
+	public void MAINFOR(Library[] libraries){
+		int index = 0;
+		for (int i = 0; i < getDeadLineTime(); i++) {
+			libraries[index]
+		}
+	}
 	
 }
