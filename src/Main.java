@@ -4,6 +4,5 @@ public class Main {
         System.out.println("TEST3");
         System.out.println("TEST4");
         System.out.println("TEST6");
-       
     }
 }
