@@ -1,14 +1,17 @@
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class FileReading {
-    public FileReading() throws IOException {
-        File file = new File("/Files/c_incunabula");
-
-        BufferedReader br = new BufferedReader(new FileReader(file));
-
-        String st;
-        while ((st = br.readLine()) != null)
-            System.out.println(st);
+    public FileReading() {
+        Scanner scn = null;
+        try {
+            scn = new Scanner(new File("Files/a_example.txt"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        while (scn.hasNext())
+            System.out.println(scn.next() + " ");
     }
 }
 
