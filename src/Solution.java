@@ -13,9 +13,21 @@ public class Solution {
 
         try {
             FileWriter myWriter = new FileWriter("Solution.txt");
-            myWriter.write("Files in Java might be tricky, but it is fun enough!\n");
-            myWriter.write("213466666666666666666666666666gregfd");
-            myWriter.write("singed up library count");
+            myWriter.write("singed up library count\n\n");
+            for (int i = 0; i < libraries.length; i++) {
+                if (libraries[i]!=null){
+                    if (libraries[i].getBooksent()!=null){
+                        myWriter.write(libraries[i].getLibraryID()+" "+libraries[i].getBooksent().size()+" \n\n");
+                        for (Object x:libraries[i].getBooksent()
+                        ) {
+                            myWriter.write(((Book)x).getID()+" ");
+                        }
+                        myWriter.write("\n\n");
+                    }
+
+                }
+
+            }
             myWriter.close();
         } catch (IOException e) {
             System.out.println("An error occurred while writing to file");

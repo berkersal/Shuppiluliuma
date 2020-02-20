@@ -59,6 +59,14 @@ public class Library {
         this.bookPerDay = bookPerDay;
     }
 
+    public ArrayList getBooksent() {
+        return booksent;
+    }
+
+    public void setBooksent(ArrayList booksent) {
+        this.booksent = booksent;
+    }
+
     public Book[] getBooks() {
         return books;
     }
