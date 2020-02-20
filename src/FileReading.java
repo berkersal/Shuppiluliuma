@@ -40,11 +40,6 @@ public class FileReading {
             libs[libId].setBooks(booksToSendOfLibrary);
             libId++;
         }
-        System.out.println(5);
-        System.out.println(libs[0].getBookPerDay());
-        System.out.println(6);
-        System.out.println(libs[1].getBooks()[1].getScore());
-        System.out.println(7);
     }
 
 
