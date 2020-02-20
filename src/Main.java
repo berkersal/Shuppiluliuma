@@ -4,5 +4,7 @@ public class Main {
         System.out.println("adasdasd");
         System.out.println("deneme deneme");
         System.out.println("deneme deneme");
+        System.out.println("fdgfhfghfgh");
+
     }
 }
