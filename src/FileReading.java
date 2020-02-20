@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class FileReading {
     public FileReading() {
         Scanner scn = null;
+        System.out.println();
         try {
             scn = new Scanner(new File("Files/a_example.txt"));
         } catch (FileNotFoundException e) {
