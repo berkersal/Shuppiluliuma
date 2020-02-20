@@ -3,9 +3,9 @@ public class Library {
     int numberOfBooks;
     int signupTime;
     int bookPerDay;
-    int[] books;
+    Book[] books;
 
-    public Library(int libraryID, int numberOfBooks, int signupTime, int bookPerDay, int[] books) {
+    public Library(int libraryID, int numberOfBooks, int signupTime, int bookPerDay, Book[] books) {
         this.libraryID = libraryID;
         this.numberOfBooks = numberOfBooks;
         this.signupTime = signupTime;
@@ -45,11 +45,11 @@ public class Library {
         this.bookPerDay = bookPerDay;
     }
 
-    public int[] getBooks() {
+    public Book[] getBooks() {
         return books;
     }
 
-    public void setBooks(int[] books) {
+    public void setBooks(Book[] books) {
         this.books = books;
     }
 }
