@@ -5,14 +5,40 @@ import java.util.Scanner;
 public class FileReading {
     public FileReading() {
         Scanner scn = null;
-        System.out.println();
+        int bookNum, libNum, deadLine;
         try {
             scn = new Scanner(new File("Files/a_example.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        while (scn.hasNextLine())
-            System.out.println(scn.nextLine());
+        String a = scn.nextLine();
+        String[] s = a.split(" ");
+        bookNum = Integer.parseInt(s[0]);
+        libNum = Integer.parseInt(s[1]);
+        deadLine = Integer.parseInt(s[2]);
+        Book[] books = new Book[bookNum];
+        a = scn.nextLine();
+        s = a.split(" ");
+        for (int i = 0; i < s.length; i++) {
+            books[i] = (new Book(i, Integer.parseInt(s[i])));
+        }
+        Library[] libs = new Library[libNum];
+
+        int libId=0;
+        while (scn.hasNextLine()) {
+            String line = scn.nextLine();
+            String[] splitted=line.split(" ");
+            libs[libId]=new Library(libId,Integer.parseInt(splitted[0]),Integer.parseInt(splitted[1]),Integer.parseInt(splitted[2]));
+            line=scn.nextLine();
+            splitted=line.split(" ");
+            Book[] booksToSendOfLibrary = new Book[splitted.length];
+            for (int i = 0; i < splitted.length; i++) {
+                booksToSendOfLibrary[i]=new Book(i,Integer.parseInt(splitted[i]));
+            }
+        }
+
     }
+
+
 }
 

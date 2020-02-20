@@ -1,9 +1,20 @@
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+
 public class Library {
     int libraryID;
     int numberOfBooks;
     int signupTime;
     int bookPerDay;
     Book[] books;
+
+    public Library(int libraryID, int numberOfBooks, int signupTime, int bookPerDay) {
+        this.libraryID = libraryID;
+        this.numberOfBooks = numberOfBooks;
+        this.signupTime = signupTime;
+        this.bookPerDay = bookPerDay;
+    }
 
     public Library(int libraryID, int numberOfBooks, int signupTime, int bookPerDay, Book[] books) {
         this.libraryID = libraryID;
@@ -14,6 +25,7 @@ public class Library {
     }
 
     public int getLibraryID() {
+
         return libraryID;
     }
 
