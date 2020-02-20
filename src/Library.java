@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
@@ -8,6 +9,7 @@ public class Library {
     int signupTime;
     int bookPerDay;
     Book[] books;
+    ArrayList booksent;
 
     public Library(int libraryID, int numberOfBooks, int signupTime, int bookPerDay) {
         this.libraryID = libraryID;
