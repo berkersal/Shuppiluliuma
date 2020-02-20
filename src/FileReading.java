@@ -40,8 +40,11 @@ public class FileReading {
             libs[libId].setBooks(booksToSendOfLibrary);
             libId++;
         }
+        Solution solution0 = new Solution(books,libs);
+        solution0.printSolution();
+
+
+
     }
-
-
 }
 
