@@ -16,12 +16,14 @@ public class FileReading {
         bookNum = Integer.parseInt(s[0]);
         libNum = Integer.parseInt(s[1]);
         deadLine = Integer.parseInt(s[2]);
+
         Book[] books = new Book[bookNum];
         a = scn.nextLine();
         s = a.split(" ");
         for (int i = 0; i < s.length; i++) {
             books[i] = (new Book(i, Integer.parseInt(s[i])));
         }
+
         Library[] libs = new Library[libNum];
 
         int libId=0;
@@ -33,10 +35,16 @@ public class FileReading {
             splitted=line.split(" ");
             Book[] booksToSendOfLibrary = new Book[splitted.length];
             for (int i = 0; i < splitted.length; i++) {
-                booksToSendOfLibrary[i]=new Book(i,Integer.parseInt(splitted[i]));
+                booksToSendOfLibrary[i]=books[Integer.parseInt(splitted[i])];
             }
+            libs[libId].setBooks(booksToSendOfLibrary);
+            libId++;
         }
-
+        System.out.println(5);
+        System.out.println(libs[0].getBookPerDay());
+        System.out.println(6);
+        System.out.println(libs[1].getBooks()[1].getScore());
+        System.out.println(7);
     }
 
 
