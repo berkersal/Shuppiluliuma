@@ -23,7 +23,7 @@ public class Management {
 	public void MAINFOR(Library[] libraries){
 		int index = 0;
 		for (int i = 0; i < getDeadLineTime(); i++) {
-			libraries[index]
+			libraries[index] = null;
 		}
 	}
 	
