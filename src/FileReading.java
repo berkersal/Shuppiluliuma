@@ -2,7 +2,7 @@ import java.io.*;
 
 public class FileReading {
     public FileReading() throws IOException {
-        File file = new File("Files");
+        File file = new File("/Files/c_incunabula");
 
         BufferedReader br = new BufferedReader(new FileReader(file));
 
