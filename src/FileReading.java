@@ -10,8 +10,8 @@ public class FileReading {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        while (scn.hasNext())
-            System.out.println(scn.next() + " ");
+        while (scn.hasNextLine())
+            System.out.println(scn.nextLine());
     }
 }
 
